@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown to PDF Converter</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: system-ui, -apple-system, sans-serif; }
+        body { background: #0f172a; color: #f8fafc; display: flex; flex-direction: column; height: 100vh; padding: 20px; }
+        header { text-align: center; margin-bottom: 20px; }
+        header h1 { font-size: 1.75rem; margin-bottom: 6px; }
+        header p { color: #94a3b8; font-size: 0.95rem; }
+        .container { display: flex; flex: 1; gap: 20px; max-width: 1200px; width: 100%; margin: 0 auto; height: 75vh; }
+        .box { flex: 1; display: flex; flex-direction: column; background: #1e293b; border-radius: 8px; padding: 16px; border: 1px solid #334155; }
+        .box h2 { font-size: 1.1rem; margin-bottom: 12px; color: #38bdf8; }
+        textarea { flex: 1; width: 100%; background: #0f172a; color: #f8fafc; border: 1px solid #475569; border-radius: 6px; padding: 12px; font-family: monospace; resize: none; font-size: 0.9rem; }
+        .actions { margin-top: 12px; display: flex; justify-content: flex-end; }
+        button { background: #0284c7; color: white; border: none; padding: 10px 20px; border-radius: 6px; font-weight: 600; cursor: pointer; transition: background 0.2s; }
+        button:hover { background: #0369a1; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Markdown to PDF Converter</h1>
+        <p>DevOps CI/CD Delivery Pipeline Demo</p>
+    </header>
+    <div class="container">
+        <form class="box" action="/convert" method="POST" style="width: 100%;">
+            <h2>Markdown Input</h2>
+            <textarea name="markdown" placeholder="# Enter your markdown here...&#10;&#10;- Feature 1&#10;- Feature 2" required></textarea>
+            <div class="actions">
+                <button type="submit">Convert & Download PDF</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

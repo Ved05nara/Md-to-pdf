@@ -1,0 +1,4 @@
+Flask==3.0.3
+markdown==3.6
+xhtml2pdf==0.2.16
+pytest==8.2.2
